@@ -13,7 +13,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
 }
 
 header {
@@ -38,21 +38,25 @@ header a {
   min-height: 70vh;
   padding: 100px 48px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
 
-  /* background-image: url("/images/hero_3.png");
-  background-size: cover;
-  background-position: center; */
+.hero-content {
+   max-width: 650px;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  line-height: 1;
+  font-family: var(--font-fraunces);
+  font-size: 3.5rem;
+  line-height: 1.2;
   margin: 16px 0 24px;
   max-width: 700px;
+  text-transform: uppercase;
 }
+
 
 .hero-actions {
   display: flex;
@@ -75,4 +79,35 @@ header a {
 .secondary-button {
   background: transparent;
   color: #171717;
+}
+
+.hero-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-art img {
+  width: min(100%, 430px);
+  height: auto;
+  display: block;
+  transform: translate(20px, 10px);
+}
+
+.eyebrow {
+  display: inline-block;
+  width: fit-content;
+
+  padding: 6px 12px;
+
+  /* background: #171717; */
+  background: #493228;
+  color: #f5f1e8;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  transform: rotate(-1deg);
 }
