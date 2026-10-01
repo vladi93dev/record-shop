@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f1e8;
-  --foreground: #171717;
+  --background: #ebe9e3;
+  --foreground: #232323;
+  --text: #171717;
 }
 
 html {
@@ -12,7 +13,7 @@ html {
 body {
   margin: 0;
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text);
   font-family: var(--font-geist-sans);
 }
 
@@ -49,7 +50,7 @@ header a {
 }
 
 .hero h1 {
-  font-family: var(--font-fraunces);
+  font-family: var(--font-heading);
   font-size: 3.5rem;
   line-height: 1.2;
   margin: 16px 0 24px;
@@ -68,11 +69,11 @@ header a {
 .secondary-button {
   text-decoration: none;
   padding: 14px 20px;
-  border: 1px solid #171717;
+  border: 1px solid var(--foreground);
 }
 
 .primary-button {
-  background: #171717;
+  background: var(--foreground);
   color: #f5f1e8;
 }
 
@@ -110,4 +111,202 @@ header a {
   letter-spacing: 0.12em;
 
   transform: rotate(-1deg);
+}
+
+.arrivals {
+  padding: 80px 48px;
+}
+
+.arrivals {
+  padding: 96px 48px;
+  background: #232323;
+  color: #f5f1e8;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #b9856d;
+}
+
+.secondary-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.section-heading a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.record-card {
+  position: relative;
+  cursor: pointer;
+  perspective: 900px;
+  width: 100%;
+}
+
+.record-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); */
+
+  transform-origin: center bottom;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+  
+  }
+
+.record-card:hover img {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.42);
+  filter: contrast(1.04) brightness(1.03);
+
+  box-shadow:
+    0 12px 24px rgba(0,0,0,0.28),
+    0 30px 60px rgba(0,0,0,0.48);
+
+  filter: brightness(1.08) saturate(1.05);
+}
+
+
+
+.record-info h3,
+.record-info span {
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
+}
+
+.record-info p {
+  transition: color 0.2s ease;
+}
+
+.record-card:hover .record-info h3,
+.record-card:hover .record-info span {
+  color: #fff3df;
+  text-shadow: 0 0 10px rgba(255, 214, 170, 0.2);
+}
+
+.record-card:hover .record-info p {
+  color: #d9c7b5;
+}
+
+
+.record-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.record-info h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.record-info p {
+  margin: 0;
+  opacity: 0.65;
+}
+
+.record-info span {
+  white-space: nowrap;
+}
+
+.about {
+  padding: 110px 48px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.about-content {
+  max-width: 560px;
+}
+
+.about-content h2 {
+    margin: 12px 0 24px;
+ }
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.services {
+  margin-top: 36px;
+  border-top: 1px solid rgba(23, 23, 23, 0.2);
+}
+
+.services > div {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.2);
+}
+
+.services span {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #9f755f;
+  opacity: 0.60;
+  transform: translateY(-2px);
+}
+
+.services h3 {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 750px) {
+  .record-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .record-card img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+   
 }

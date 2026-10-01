@@ -13,13 +13,13 @@ import {
 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Manrope({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-text",
   subsets: ["latin"],
 });
 
 const fraunces = Fraunces({
-  variable: "--font-fraunces",
+  variable: "--font-heading",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${geistSans.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

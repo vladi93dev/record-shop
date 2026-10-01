@@ -19,7 +19,7 @@ export default function Home() {
             <h1>
               Good Music
               <br />
-              Lives Here.
+              Lives Here
             </h1>
 
             <p className="hero-description">
@@ -43,12 +43,103 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="arrivals">
-          <h2>New Arrivals</h2>
-        </section>
+        <section id="arrivals" className="arrivals">
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">Just in</p>
+              <h2 className="secondary-title">New Arrivals</h2>
+            </div>
 
-        <section id="about">
-          <h2>About</h2>
+            <a href="#">View all records</a>
+          </div>
+
+          <div className="record-grid">
+            <article className="record-card">
+              <img
+                src="/images/album_art_1.png"
+                alt="Static Bloom - Night Windows"
+              />
+
+              <div className="record-info">
+                <div>
+                  <h3>Night Windows</h3>
+                  <p>Static Bloom</p>
+                </div>
+
+                <span>₪120</span>
+              </div>
+            </article>
+            <article className="record-card">
+              <img
+                src="/images/album_art_2.png"
+                alt="Static Bloom - Night Windows"
+              />
+
+              <div className="record-info">
+                <div>
+                  <h3>Night Windows</h3>
+                  <p>Static Bloom</p>
+                </div>
+
+                <span>₪120</span>
+              </div>
+            </article>
+
+            <article className="record-card">
+              <img
+                src="/images/album_art_3.png"
+                alt="Static Bloom - Night Windows"
+              />
+
+              <div className="record-info">
+                <div>
+                  <h3>Night Windows</h3>
+                  <p>Static Bloom</p>
+                </div>
+
+                <span>₪120</span>
+              </div>
+            </article>
+
+            {/* repeat */}
+          </div>
+        </section>
+        <section id="about" className="about">
+          <div className="about-image">
+            <img
+              src="/images/store_int_1.png"
+              alt="Inside Needle & Static Records"
+            />
+          </div>
+
+          <div className="about-content">
+            <p className="section-kicker">About the shop</p>
+
+            <h2 className="secondary-title">An underground record shop.</h2>
+
+            <p className="about-text">
+              Needle & Static is an independent record shop focused on new and
+              used vinyl, from familiar favorites to records you didn&apos;t
+              know you were looking for.
+            </p>
+
+            <div className="services">
+              <div>
+                <span>01</span>
+                <h3>Buy</h3>
+              </div>
+
+              <div>
+                <span>02</span>
+                <h3>Sell</h3>
+              </div>
+
+              <div>
+                <span>03</span>
+                <h3>Trade</h3>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="visit">
