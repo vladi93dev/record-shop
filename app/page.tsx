@@ -142,8 +142,53 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="visit">
-          <h2>Visit</h2>
+        <section id="visit" className="visit">
+          <div className="visit-top">
+            <div>
+              <p className="section-kicker">Visit the shop</p>
+              <h2 className="secondary-title">Come dig through the crates.</h2>
+            </div>
+
+            <a className="visit-link" href="#">
+              Get Directions →
+            </a>
+          </div>
+
+          <div className="visit-info">
+            <div>
+              <p className="visit-label">Address</p>
+              <p>
+                24 High St.
+                <br />
+                Novara
+              </p>
+            </div>
+
+            <div>
+              <p className="visit-label">Hours</p>
+              <p>
+                Sun–Thu 11:00–20:00
+                <br />
+                Fri 10:00–15:00
+                <br />
+                Sat Closed
+              </p>
+            </div>
+
+            <div>
+              <p className="visit-label">Contact</p>
+              <p>
+                hello@needleandstatic.com
+                <br />
+                Instagram
+              </p>
+            </div>
+          </div>
+
+          <div className="visit-bottom">
+            <p>Needle & Static Records</p>
+            <p>© 2026 · All rights reserved</p>
+          </div>
         </section>
       </main>
     </>
