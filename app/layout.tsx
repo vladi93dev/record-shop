@@ -21,7 +21,7 @@ const manrope = Manrope({
 const fraunces = Fraunces({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "300"],
 });
 
 

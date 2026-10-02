@@ -2,7 +2,10 @@ export default function Home() {
   return (
     <>
       <header>
-        <div>Needle & Static Records</div>
+        <a className="brand" href="#">
+          Needle & Static
+          <span> Records</span>
+        </a>
 
         <nav>
           <a href="#arrivals">New Arrivals</a>
@@ -77,8 +80,8 @@ export default function Home() {
 
               <div className="record-info">
                 <div>
-                  <h3>Night Windows</h3>
-                  <p>Static Bloom</p>
+                  <h3>After the Streetlights</h3>
+                  <p>Velvet Static</p>
                 </div>
 
                 <span>₪120</span>
@@ -93,8 +96,8 @@ export default function Home() {
 
               <div className="record-info">
                 <div>
-                  <h3>Night Windows</h3>
-                  <p>Static Bloom</p>
+                  <h3>Ghost Note</h3>
+                  <p>Rooms in Rain</p>
                 </div>
 
                 <span>₪120</span>
