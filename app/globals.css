@@ -55,6 +55,7 @@ header a {
 }
 
 .hero {
+  overflow-x: hidden;
   min-height: 70vh;
   padding: 100px 48px;
 
