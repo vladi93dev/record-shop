@@ -1,3 +1,5 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <>
@@ -15,37 +17,7 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="hero">
-          <div className="hero-content">
-            <p className="eyebrow">Independent record store</p>
-
-            <h1>
-              Good Music
-              <br />
-              Lives Here
-            </h1>
-
-            <p className="hero-description">
-              New and used vinyl, carefully selected for people who still love
-              digging through records.
-            </p>
-
-            <div className="hero-actions">
-              <a className="primary-button" href="#arrivals">
-                Browse New Arrivals
-              </a>
-
-              <a className="secondary-button" href="#visit">
-                Visit the Shop
-              </a>
-            </div>
-          </div>
-
-          <div className="hero-art">
-            <img src="/images/vinyl_2.png" alt="Illustrated vinyl record" />
-          </div>
-        </section>
-
+        <Hero />
         <section id="arrivals" className="arrivals">
           <div className="section-heading">
             <div>

@@ -58,7 +58,6 @@ header a {
   overflow-x: hidden;
   min-height: 70vh;
   padding: 100px 48px;
-
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
@@ -112,13 +111,18 @@ header a {
   align-items: center;
 }
 
-.hero-art img {
+.vinyl {
   width: min(100%, 430px);
   height: auto;
   display: block;
   transform: translate(20px, 10px);
-
+  
   animation: vinyl-spin 35s linear infinite;
+  animation-play-state: paused;
+}
+
+.vinyl-playing {
+  animation-play-state: running;
 }
 
 @keyframes vinyl-spin {
@@ -129,6 +133,65 @@ header a {
   to {
     transform: translate(20px, 10px) rotate(360deg);
   }
+}
+
+.now-playing {
+  position: fixed;
+  right: 16px;
+  bottom: 12px;
+
+  width: 280px;
+  padding: 16px 18px;
+
+  background: rgba(52, 66, 57, 0.72);
+  color: #f5f1e8;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+
+  z-index: 100;
+}
+
+.now-playing-label {
+  display: block;
+  margin-bottom: 6px;
+
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.55;
+}
+
+.now-playing-track {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.now-playing button {
+  border: 1px solid rgba(245, 241, 232, 0.45);
+  background: transparent;
+  color: inherit;
+
+  padding: 7px 12px;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+  
+}
+
+.now-playing button:hover {
+  background: rgba(34, 45, 38, 0.96);
+  border-color: rgba(245, 241, 232, 0.65);
+  color: #f5f1e8;
+  transform: translateY(-2px);
 }
 
 .eyebrow {
@@ -147,10 +210,6 @@ header a {
   letter-spacing: 0.12em;
 
   transform: rotate(-1deg);
-}
-
-.arrivals {
-  padding: 80px 48px;
 }
 
 .arrivals {
