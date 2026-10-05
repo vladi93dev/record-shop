@@ -131,8 +131,15 @@ export default function Hero() {
         <span className="player-track">
           {currentTrack && (
             <span className="player-track-inner">
-              {currentTrack.title}
-              <span className="player-artist"> — {currentTrack.artist}</span>
+              <span className="track-copy">
+                {currentTrack.title}
+                <span className="player-artist"> — {currentTrack.artist}</span>
+              </span>
+
+              <span className="track-copy">
+                {currentTrack.title}
+                <span className="player-artist"> — {currentTrack.artist}</span>
+              </span>
             </span>
           )}
         </span>

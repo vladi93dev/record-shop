@@ -398,24 +398,27 @@ header a {
 
 
 .player-track-inner {
-  display: inline-block;
+  display: inline-flex;
   white-space: nowrap;
-  padding-right: 40px;
 }
 
 .music-player.has-track:hover .player-track-inner {
   animation: track-scroll 6s linear infinite;
 }
 
+.track-copy {
+  flex-shrink: 0;
+  min-width: 280px;
+}
+
 
 @keyframes track-scroll {
-  0%,
-  5% {
+  from {
     transform: translateX(0);
   }
 
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
