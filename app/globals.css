@@ -320,21 +320,17 @@ header a {
 }
 
 .player-track {
-  max-width: 220px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-
-.player-track {
-   max-width: 220px;
+  max-width: 0;
   opacity: 0;
+
   overflow: hidden;
   white-space: nowrap;
 
-  transition:
-    max-width 260ms ease,
-    opacity 160ms ease;
+   transition:
+    gap 320ms ease,
+    padding 320ms ease,
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .music-player:hover {
@@ -394,7 +390,7 @@ header a {
   text-overflow: clip;
 }
 
-.music-player:hover .player-track {
+.music-player.has-track:hover .player-track {
   max-width: 220px;
   opacity: 1;
 }
@@ -407,7 +403,7 @@ header a {
   padding-right: 40px;
 }
 
-.music-player:hover .player-track-inner {
+.music-player.has-track:hover .player-track-inner {
   animation: track-scroll 6s linear infinite;
 }
 

@@ -127,15 +127,15 @@ export default function Hero() {
           />
         </div>
       </section>
-      <div className="music-player">
-        {currentTrack && (
-          <span className="player-track">
+      <div className={`music-player ${currentTrack ? "has-track" : ""}`}>
+        <span className="player-track">
+          {currentTrack && (
             <span className="player-track-inner">
               {currentTrack.title}
               <span className="player-artist"> — {currentTrack.artist}</span>
             </span>
-          </span>
-        )}
+          )}
+        </span>
 
         <button
           type="button"
