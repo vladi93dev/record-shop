@@ -403,7 +403,7 @@ header a {
 }
 
 .music-player.has-track:hover .player-track-inner {
-  animation: track-scroll 6s linear infinite;
+  animation: track-scroll 12s linear infinite;
 }
 
 .track-copy {
