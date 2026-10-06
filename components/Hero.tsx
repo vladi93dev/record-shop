@@ -41,12 +41,9 @@ const tracks: Track[] = [
 export default function Hero() {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [playerActivated, setPlayerActivated] = useState(false);
-  const [isPlayerExpanded, setIsPlayerExpanded] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
-  const inlinePlayerRef = useRef<HTMLDivElement>(null);
-
+  
   async function handlePlayPause() {
     const audio = audioRef.current;
 
@@ -73,21 +70,6 @@ export default function Hero() {
       setIsPlaying(true);
     }
   }
-
-  useEffect(() => {
-    const player = inlinePlayerRef.current;
-
-    if (!player) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      const hasScrolledPastPlayer =
-        !entry.isIntersecting && entry.boundingClientRect.top < 0;
-    });
-
-    observer.observe(player);
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <>

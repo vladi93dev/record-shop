@@ -30,49 +30,40 @@ export default function Home() {
 
           <div className="record-grid">
             <article className="record-card">
-              <img
-                src="/images/album_art_1.png"
-                alt="Static Bloom - Night Windows"
-              />
+              <img src="/images/8.png" alt="Ash Coast - Faint Reciever" />
 
               <div className="record-info">
                 <div>
-                  <h3>Night Windows</h3>
-                  <p>Static Bloom</p>
+                  <h3>Ash Coast</h3>
+                  <p>Faint Reciever</p>
                 </div>
 
                 <span>₪120</span>
               </div>
             </article>
             <article className="record-card">
-              <img
-                src="/images/album_art_2.png"
-                alt="Static Bloom - Night Windows"
-              />
+              <img src="/images/7.png" alt="Moth Circuit - Platform Weather" />
 
               <div className="record-info">
                 <div>
-                  <h3>After the Streetlights</h3>
-                  <p>Velvet Static</p>
+                  <h3>Moth Cirtuit</h3>
+                  <p>Platform Weather</p>
                 </div>
 
-                <span>₪120</span>
+                <span>₪90</span>
               </div>
             </article>
 
             <article className="record-card">
-              <img
-                src="/images/album_art_3.png"
-                alt="Static Bloom - Night Windows"
-              />
+              <img src="/images/4.png" alt="Static Bloom - Night Windows" />
 
               <div className="record-info">
                 <div>
-                  <h3>Ghost Note</h3>
-                  <p>Rooms in Rain</p>
+                  <h3>Morrow Static</h3>
+                  <p>Cold Horizon</p>
                 </div>
 
-                <span>₪120</span>
+                <span>₪100</span>
               </div>
             </article>
 

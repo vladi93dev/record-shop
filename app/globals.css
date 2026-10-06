@@ -162,43 +162,6 @@ header a {
   color: #f5f1e8;
 }
 
-.docked-player {
-  position: fixed;
-  right: 16px;
-  bottom: 12px;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  padding: 10px 12px;
-
-  background: rgba(52, 66, 57, 0.82);
-  color: #f5f1e8;
-
-  z-index: 100;
-}
-
-/* .now-playing {
-  position: fixed;
-  right: 16px;
-  bottom: 12px;
-
-  width: 280px;
-  padding: 16px 18px;
-
-  background: rgba(52, 66, 57, 0.72);
-  color: #f5f1e8;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
-
-  z-index: 100;
-} */
 
 .now-playing-label {
   display: block;
@@ -460,6 +423,7 @@ header a {
  
 }
 
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -575,13 +539,15 @@ header a {
 }
 
 .record-info p {
-  margin: 0;
-  opacity: 0.75;
+ font-size: 0.88rem;
+  opacity: 0.72;
 }
 
 .record-info span {
   white-space: nowrap;
+  
 }
+
 
 .about {
   position: relative;
@@ -706,14 +672,24 @@ header a {
 
 /* MEDIA QUERIES */
 @media (max-width: 750px) {
+.section-heading {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+   .section-heading > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
   .hero {
     grid-template-columns: 1fr;
-    /* padding: 32px 24px 48px; */
     padding: 32px 24px 64px;
     gap: 28px;
-    
-    
-    
 
     display: flex;
 
@@ -748,7 +724,6 @@ header a {
   }
 
   .vinyl {
-
     display: flex;
     justify-content: center;
 
@@ -781,7 +756,7 @@ header a {
     overflow: hidden;
     text-overflow: ellipsis;
 
-     margin: 0;
+    margin: 0;
     flex: 1;
 
     white-space: nowrap;
@@ -795,13 +770,22 @@ header a {
     flex-shrink: 0;
   }
 
+  .arrivals {
+    padding: 72px 24px;
+  }
+
   .record-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 44px
+  }
+
+  .record-card {
+     width: min(100%, 410px);
   }
 
   .record-card img {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
   }
    
