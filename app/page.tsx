@@ -71,39 +71,28 @@ export default function Home() {
           </div>
         </section>
         <section id="about" className="about">
-          <div className="about-image">
-            <img
-              src="/images/store_int_1.png"
-              alt="Inside Needle & Static Records"
-            />
-          </div>
+          <div className="about-inner">
+            <div className="about-image">
+              <img
+                src="/images/store_int_1.png"
+                alt="Inside Needle & Static Records"
+              />
+            </div>
 
-          <div className="about-content">
-            <p className="section-kicker">About the shop</p>
+            <div className="about-content">
+              <p className="section-kicker">About the shop</p>
 
-            <h2 className="secondary-title">An underground record shop.</h2>
+              <h2 className="secondary-title">An underground record shop.</h2>
 
-            <p className="about-text">
-              Needle & Static is an independent record shop focused on new and
-              used vinyl, from familiar favorites to records you didn&apos;t
-              know you were looking for.
-            </p>
+              <p className="about-note">
+                Independent vinyl · New & used · Local listening
+              </p>
 
-            <div className="services">
-              <div>
-                <span>01</span>
-                <h3>Buy</h3>
-              </div>
-
-              <div>
-                <span>02</span>
-                <h3>Sell</h3>
-              </div>
-
-              <div>
-                <span>03</span>
-                <h3>Trade</h3>
-              </div>
+              <p className="about-text">
+                Needle & Static is an independent record shop focused on new and
+                used vinyl, from familiar favorites to records you didn&apos;t
+                know you were looking for.
+              </p>
             </div>
           </div>
         </section>
