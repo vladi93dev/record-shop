@@ -25,7 +25,7 @@ export default function Home() {
               <h2 className="secondary-title">New Arrivals</h2>
             </div>
 
-            <a href="#">View all records</a>
+            {/* <a href="#">View all records</a> */}
           </div>
 
           <div className="record-grid">
@@ -132,10 +132,21 @@ export default function Home() {
 
             <div>
               <p className="visit-label">Contact</p>
+
               <p>
-                hello@needleandstatic.com
+                <a href="mailto:hello@needleandstatic.com">
+                  hello@needleandstatic.com
+                </a>
+
                 <br />
-                Instagram
+
+                <a
+                  href="https://instagram.com/needleandstatic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
               </p>
             </div>
           </div>

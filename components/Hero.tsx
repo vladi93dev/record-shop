@@ -80,9 +80,8 @@ export default function Hero() {
           <p className="eyebrow">Independent record store</p>
 
           <h1>
-            Good Music
-            <br />
-            Lives Here
+            <span>Records That</span>
+            <span>Stay With You</span>
           </h1>
 
           <p className="hero-description">
