@@ -405,11 +405,7 @@ header nav a:hover {
   text-overflow: clip;
 }
 
-.music-player.has-track:hover .player-track,
-.music-player.has-track:focus-visible .player-track {
-  max-width: 220px;
-  opacity: 1;
-}
+
 
 
 
@@ -418,10 +414,6 @@ header nav a:hover {
   white-space: nowrap;
 }
 
-.music-player.has-track:hover .player-track-inner,
-.music-player.has-track:focus-visible .player-track-inner {
-  animation: track-scroll 12s linear infinite;
-}
 
 .track-copy {
   flex-shrink: 0;
@@ -1109,6 +1101,29 @@ html:has(.record-modal[open]) {
   }
 }
 
+.music-player.has-track.is-expanded .player-track {
+  max-width: 220px;
+  opacity: 1;
+}
+
+.music-player.has-track.is-expanded .player-track-inner {
+  animation: track-scroll 12s linear infinite;
+}
+
+/* Desktop hover and keyboard focus */
+@media (hover: hover) and (pointer: fine) {
+  .music-player.has-track:hover .player-track,
+  .music-player.has-track:has(.player-control:focus-visible) .player-track {
+    max-width: 220px;
+    opacity: 1;
+  }
+
+  .music-player.has-track:hover .player-track-inner,
+  .music-player.has-track:has(.player-control:focus-visible) .player-track-inner {
+    animation: track-scroll 12s linear infinite;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1125,3 +1140,4 @@ html:has(.record-modal[open]) {
     transition: none;
   }
 }
+

@@ -42,6 +42,9 @@ export default function Hero() {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackError, setPlaybackError] = useState<string | null>(null);
+  const [isPlayerExpanded, setIsPlayerExpanded] = useState(false);
+
+  const collapseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -54,9 +57,15 @@ export default function Hero() {
     if (isPlaying) {
       audio.pause();
       setIsPlaying(false);
+
+      if (collapseTimer.current !== null) {
+        clearTimeout(collapseTimer.current);
+        collapseTimer.current = null;
+      }
+
+      setIsPlayerExpanded(false);
       return;
     }
-
     try {
       if (currentTrack === null) {
         const randomIndex = Math.floor(Math.random() * tracks.length);
@@ -74,6 +83,27 @@ export default function Hero() {
       setPlaybackError("Couldn't play this track. Try again.");
     }
   }
+
+  function revealPlayer() {
+    if (collapseTimer.current !== null) {
+      clearTimeout(collapseTimer.current);
+    }
+
+    setIsPlayerExpanded(true);
+
+    collapseTimer.current = setTimeout(() => {
+      setIsPlayerExpanded(false);
+      collapseTimer.current = null;
+    }, 3000);
+  }
+
+  useEffect(() => {
+    return () => {
+      if (collapseTimer.current !== null) {
+        clearTimeout(collapseTimer.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -112,7 +142,16 @@ export default function Hero() {
           />
         </div>
       </section>
-      <div className={`music-player ${currentTrack ? "has-track" : ""}`}>
+      <div
+        className={`music-player ${currentTrack ? "has-track" : ""} ${
+          isPlayerExpanded ? "is-expanded" : ""
+        }`}
+        onPointerUp={(event) => {
+          if (event.pointerType !== "mouse" && !isPlaying) {
+            revealPlayer();
+          }
+        }}
+      >
         <span className="player-track">
           {currentTrack && (
             <span className="player-track-inner">
