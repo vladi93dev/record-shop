@@ -386,9 +386,6 @@ header nav a:hover {
   margin-bottom: 2px;
 }
 
-
-
-
 .player-track {
   max-width: 0;
   opacity: 0;
@@ -432,6 +429,7 @@ header nav a:hover {
 }
 
 
+
 @keyframes track-scroll {
   from {
     transform: translateX(0);
@@ -442,9 +440,6 @@ header nav a:hover {
   }
 }
 
-
-
-
 .now-playing button:hover {
   background: rgba(34, 45, 38, 0.96);
   border-color: rgba(245, 241, 232, 0.65);
@@ -452,7 +447,13 @@ header nav a:hover {
   transform: translateY(-2px);
 }
 
-
+.player-error {
+  min-width: 0;
+  max-width: 180px;
+  margin-right: 10px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
 
 .eyebrow {
   display: inline-block;
@@ -1098,5 +1099,22 @@ html:has(.record-modal[open]) {
     align-items: center;
     gap: 6px;
     text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .record-modal,
+  .vinyl,
+  .music-player .player-track-inner {
+    animation: none !important;
+  }
+
+  .music-player,
+  .player-track {
+    transition: none;
   }
 }

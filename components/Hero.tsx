@@ -41,33 +41,37 @@ const tracks: Track[] = [
 export default function Hero() {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackError, setPlaybackError] = useState<string | null>(null);
 
   const audioRef = useRef<HTMLAudioElement>(null);
-  
+
   async function handlePlayPause() {
     const audio = audioRef.current;
-
     if (!audio) return;
 
-    if (currentTrack === null) {
-      const randomIndex = Math.floor(Math.random() * tracks.length);
-      const randomTrack = tracks[randomIndex];
-
-      setCurrentTrack(randomTrack);
-      audio.src = randomTrack.src;
-
-      await audio.play();
-      setIsPlaying(true);
-
-      return;
-    }
+    setPlaybackError(null);
 
     if (isPlaying) {
       audio.pause();
       setIsPlaying(false);
-    } else {
+      return;
+    }
+
+    try {
+      if (currentTrack === null) {
+        const randomIndex = Math.floor(Math.random() * tracks.length);
+        const randomTrack = tracks[randomIndex];
+
+        setCurrentTrack(randomTrack);
+        audio.src = randomTrack.src;
+      }
+
       await audio.play();
       setIsPlaying(true);
+    } catch {
+      setIsPlaying(false);
+      setCurrentTrack(null);
+      setPlaybackError("Couldn't play this track. Try again.");
     }
   }
 
@@ -124,6 +128,12 @@ export default function Hero() {
             </span>
           )}
         </span>
+
+        {playbackError && (
+          <span className="player-error" role="status">
+            {playbackError}
+          </span>
+        )}
 
         <button
           type="button"
