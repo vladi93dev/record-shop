@@ -94,7 +94,7 @@ export default function Hero() {
     collapseTimer.current = setTimeout(() => {
       setIsPlayerExpanded(false);
       collapseTimer.current = null;
-    }, 3000);
+    }, 4000);
   }
 
   useEffect(() => {

@@ -1107,7 +1107,7 @@ html:has(.record-modal[open]) {
 }
 
 .music-player.has-track.is-expanded .player-track-inner {
-  animation: track-scroll 12s linear infinite;
+  animation: track-scroll 6s linear infinite;
 }
 
 /* Desktop hover and keyboard focus */
