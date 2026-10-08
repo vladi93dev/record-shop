@@ -180,7 +180,7 @@ export default function Home() {
           <div className="visit-top">
             <div>
               <p className="section-kicker">Visit the shop</p>
-              <h2 className="secondary-title">Come dig through the crates.</h2>
+              <h2 className="secondary-title">Come browse the records</h2>
             </div>
           </div>
 
