@@ -71,7 +71,7 @@ export default function Home() {
               <div className="record-info">
                 <div>
                   <h3>Ash Coast</h3>
-                  <p>Faint Reciever</p>
+                  <p>Faint Receiver</p>
                 </div>
 
                 <span>₪120</span>
@@ -104,7 +104,7 @@ export default function Home() {
 
               <div className="record-info">
                 <div>
-                  <h3>Moth Cirtuit</h3>
+                  <h3>Moth Circuit</h3>
                   <p>Platform Weather</p>
                 </div>
 
@@ -166,9 +166,11 @@ export default function Home() {
               </p>
 
               <p className="about-text">
-                Needle & Static is an independent record shop focused on new and
-                used vinyl, from familiar favorites to records you didn&apos;t
-                know you were looking for.
+                A small independent shop in Haifa for curious listeners. We
+                stock new and used vinyl across experimental rock, electronic
+                music, jazz and the spaces between. Familiar favorites sit
+                beside overlooked releases—come browse, listen and find
+                something unexpected.
               </p>
             </div>
           </div>
@@ -180,19 +182,15 @@ export default function Home() {
               <p className="section-kicker">Visit the shop</p>
               <h2 className="secondary-title">Come dig through the crates.</h2>
             </div>
-
-            <a className="visit-link" href="#">
-              Get Directions →
-            </a>
           </div>
 
           <div className="visit-info">
             <div>
               <p className="visit-label">Address</p>
               <p>
-                24 High St.
+                24 Static Lane
                 <br />
-                Novara
+                Haifa, Israel
               </p>
             </div>
 
