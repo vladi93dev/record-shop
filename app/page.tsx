@@ -1,6 +1,23 @@
+"use client";
+import { useState } from "react";
 import Hero from "@/components/Hero";
 
+type RecordDetails = {
+  artist: string;
+  title: string;
+  price: number;
+  image: string;
+  description: string;
+  genre: string;
+  format: string;
+  condition: string;
+};
+
 export default function Home() {
+  const [selectedRecord, setSelectedRecord] = useState<RecordDetails | null>(
+    null,
+  );
+
   return (
     <>
       <header>
@@ -30,7 +47,26 @@ export default function Home() {
 
           <div className="record-grid">
             <article className="record-card">
-              <img src="/images/8.png" alt="Ash Coast - Faint Reciever" />
+              <button
+                type="button"
+                className="record-open"
+                aria-label="View details for Ash Coast — Faint Receiver"
+                onClick={() =>
+                  setSelectedRecord({
+                    artist: "Ash Coast",
+                    title: "Faint Receiver",
+                    price: 120,
+                    image: "/images/8.png",
+                    description:
+                      "Hazy guitars, tape hiss and slow-burning melodies. A record for late-night listening.",
+                    genre: "Ambient / Shoegaze",
+                    format: "LP · 12″",
+                    condition: "New",
+                  })
+                }
+              >
+                <img src="/images/8.png" alt="Ash Coast — Faint Receiver" />
+              </button>
 
               <div className="record-info">
                 <div>
@@ -42,7 +78,29 @@ export default function Home() {
               </div>
             </article>
             <article className="record-card">
-              <img src="/images/7.png" alt="Moth Circuit - Platform Weather" />
+              <button
+                type="button"
+                className="record-open"
+                aria-label="View details for Moth Circuit — Platform Weather"
+                onClick={() =>
+                  setSelectedRecord({
+                    artist: "Moth Circuit",
+                    title: "Platform Weather",
+                    price: 90,
+                    image: "/images/7.png",
+                    description:
+                      "Flickering synths and loose rhythms drifting through the noise of an empty station.",
+                    genre: "Electronic / Downtempo",
+                    format: "LP · 12″",
+                    condition: "Used · Very Good",
+                  })
+                }
+              >
+                <img
+                  src="/images/7.png"
+                  alt="Moth Circuit — Platform Weather"
+                />
+              </button>
 
               <div className="record-info">
                 <div>
@@ -55,7 +113,26 @@ export default function Home() {
             </article>
 
             <article className="record-card">
-              <img src="/images/4.png" alt="Static Bloom - Night Windows" />
+              <button
+                type="button"
+                className="record-open"
+                aria-label="View details for Morrow Static — Cold Horizon"
+                onClick={() =>
+                  setSelectedRecord({
+                    artist: "Morrow Static",
+                    title: "Cold Horizon",
+                    price: 100,
+                    image: "/images/4.png",
+                    description:
+                      "Slow-building guitars and spacious textures tracing a cold, distant landscape.",
+                    genre: "Post-rock / Experimental",
+                    format: "LP · 12″",
+                    condition: "New",
+                  })
+                }
+              >
+                <img src="/images/4.png" alt="Morrow Static — Cold Horizon" />
+              </button>
 
               <div className="record-info">
                 <div>
@@ -156,6 +233,54 @@ export default function Home() {
             <p>© 2026 · All rights reserved</p>
           </div>
         </section>
+        {selectedRecord && (
+          <dialog
+            className="record-modal"
+            aria-labelledby="record-modal-title"
+            ref={(dialog) => {
+              if (dialog && !dialog.open) {
+                dialog.showModal();
+              }
+            }}
+            onClose={() => setSelectedRecord(null)}
+          >
+            <button
+              type="button"
+              className="record-modal-close"
+              onClick={() => setSelectedRecord(null)}
+            >
+              Close ×
+            </button>
+
+            <img
+              src={selectedRecord.image}
+              alt={`${selectedRecord.artist} — ${selectedRecord.title}`}
+            />
+
+            <h2 id="record-modal-title">{selectedRecord.artist}</h2>
+            <p className="record-modal-title">{selectedRecord.title}</p>
+
+            <p className="record-modal-description">
+              {selectedRecord.description}
+            </p>
+
+            <dl className="record-modal-details">
+              <div>
+                <dt>Genre</dt>
+                <dd>{selectedRecord.genre}</dd>
+              </div>
+              <div>
+                <dt>Format</dt>
+                <dd>{selectedRecord.format}</dd>
+              </div>
+              <div>
+                <dt>Condition</dt>
+                <dd>{selectedRecord.condition}</dd>
+              </div>
+            </dl>
+            <p className="record-modal-price">₪{selectedRecord.price}</p>
+          </dialog>
+        )}
       </main>
     </>
   );
