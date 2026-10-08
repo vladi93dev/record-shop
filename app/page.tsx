@@ -227,7 +227,16 @@ export default function Home() {
           </div>
 
           <div className="visit-bottom">
-            <p>Needle & Static Records</p>
+            <p>
+              Designed &amp; built by{" "}
+              <a
+                href="https://github.com/vladi93dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Vladi Semyonov
+              </a>
+            </p>
             <p>© 2026 · All rights reserved</p>
           </div>
         </section>

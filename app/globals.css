@@ -864,6 +864,13 @@ gap: 48px;
   opacity: 0.5;
 }
 
+.visit-bottom a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.875rem
+}
+
 .visit-bottom p:first-child {
   color: rgba(245, 241, 232, 0.72);
 }
