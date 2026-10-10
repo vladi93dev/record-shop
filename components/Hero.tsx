@@ -11,31 +11,31 @@ type Track = {
 };
 
 const tracks: Track[] = [
-  // {
-  //   title: "Night Windows",
-  //   artist: "Static Bloom",
-  //   src: "/audio/track_1.mp3",
-  // },
-  // {
-  //   title: "Velvet Static",
-  //   artist: "After the Streetlights",
-  //   src: "/audio/track_2.mp3",
-  // },
-  // {
-  //   title: "Ghost Note",
-  //   artist: "Rooms in Rain",
-  //   src: "/audio/track_3.mp3",
-  // },
+  {
+    title: "Night Windows",
+    artist: "Static Bloom",
+    src: "/audio/track_1.mp3",
+  },
+  {
+    title: "Velvet Static",
+    artist: "After the Streetlights",
+    src: "/audio/track_2.mp3",
+  },
+  {
+    title: "Ghost Note",
+    artist: "Rooms in Rain",
+    src: "/audio/track_3.mp3",
+  },
   {
     title: "Ghost Note 2",
     artist: "Rooms in Rain 2",
     src: "/audio/track_4.mp3",
   },
-  // {
-  //   title: "Velvet Static 2",
-  //   artist: "After the Streetlights 2",
-  //   src: "/audio/track_5.mp3",
-  // },
+  {
+    title: "Velvet Static 2",
+    artist: "After the Streetlights 2",
+    src: "/audio/track_5.mp3",
+  },
 ];
 
 export default function Hero() {
