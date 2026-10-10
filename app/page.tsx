@@ -220,7 +220,7 @@ export default function Home() {
                 <br />
 
                 <a
-                  href="https://instagram.com/needleandstatic"
+                  href="https://instagram.com/needleandstatic_placeholder"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
