@@ -923,7 +923,7 @@ html:has(.record-modal[open]) {
   }
 
   .hero h1 {
-    font-size: clamp(1.5rem, 9.5vw, 2.75rem);
+    font-size: clamp(1.5rem, 8.5vw, 2.4rem);
     margin-bottom: 14px;
   }
 
@@ -945,6 +945,11 @@ html:has(.record-modal[open]) {
   .hero-actions {
     margin-top: 0;
   }
+
+  .hero-actions a {
+    padding: 12px 16px;
+  }
+  
 
   .vinyl {
      width: min(100%, 300px);
@@ -1020,6 +1025,10 @@ html:has(.record-modal[open]) {
     gap: 32px;
     padding: 80px 24px;
   }
+  .secondary-title {
+  font-size: 2rem;
+  line-height: 1.08;
+}
 
   .about-inner {
     width: min(100%, 600px);
@@ -1065,7 +1074,7 @@ html:has(.record-modal[open]) {
   }
 
    .visit {
-    padding: 72px 24px 52px;
+    padding: 72px 24px 72px;
   }
  
     .visit-top {
@@ -1093,11 +1102,15 @@ html:has(.record-modal[open]) {
     overflow-wrap: anywhere;
   }
 
-  .visit-bottom {
-    /* flex-direction: column; */
+ .visit-bottom {
+    flex-direction: column;
     align-items: center;
     gap: 6px;
     text-align: center;
+  }
+
+  .visit-bottom p {
+    margin: 0;
   }
 }
 
